@@ -14,7 +14,7 @@ TARGET=main
 BUILD_TARGET=$(DIR_BUILD)/$(TARGET)
 
 CC=g++
-CFLAGS=-Wall -I$(DIR_INC) -std=c++17 -c -g
+CFLAGS=-Wall -I$(DIR_INC) -std=c++23 -c -g
 
 all: $(BUILD_TARGET)
 

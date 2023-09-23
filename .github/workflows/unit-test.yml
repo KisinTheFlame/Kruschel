@@ -1,0 +1,21 @@
+name: Unit Test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    types: [opened, reopened]
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make
+      run: make
+    - name: make test
+      run: make test
